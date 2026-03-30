@@ -1,0 +1,149 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f7fb;
+  --panel: #ffffff;
+  --text: #1d2939;
+  --muted: #667085;
+  --line: #d0d5dd;
+  --primary: #0f766e;
+  --primary-hover: #0b5f59;
+  --danger: #b42318;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, #dff7f2 0, transparent 45%),
+    radial-gradient(circle at 85% 10%, #d9ebff 0, transparent 40%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin: 8px 0 20px;
+  color: var(--muted);
+}
+
+.todo-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.todo-form input {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.todo-form button,
+.todo-meta button,
+.delete-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.todo-form button {
+  background: var(--primary);
+  color: #fff;
+}
+
+.todo-form button:hover {
+  background: var(--primary-hover);
+}
+
+.todo-panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.todo-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.todo-meta button {
+  background: #fff1f0;
+  color: var(--danger);
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-left input {
+  width: 18px;
+  height: 18px;
+}
+
+.is-completed .todo-left span {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.delete-btn {
+  background: #fee4e2;
+  color: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+}
+
+@media (max-width: 640px) {
+  .app {
+    margin: 20px auto;
+    padding: 14px;
+  }
+
+  .todo-form {
+    grid-template-columns: 1fr;
+  }
+}

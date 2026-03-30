@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CN Todo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Todo App</h1>
+        <p>Firebase Realtime Database sync</p>
+      </header>
+
+      <form id="todo-form" class="todo-form">
+        <input
+          id="todo-input"
+          type="text"
+          placeholder="Type a task"
+          maxlength="120"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <section class="todo-panel">
+        <div class="todo-meta">
+          <span id="todo-count">0 items</span>
+          <button id="clear-completed" type="button">Clear completed</button>
+        </div>
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
